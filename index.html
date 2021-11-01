@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons.css">
+  <script>
+    var param = <?!= JSON.stringify(dataFromServerTemplate) ?>;
+  </script>
+  <?!= include('index.js') ?>
+  <?!= include('index.css') ?>
+</head>
+<body>
+  <div id='result' class='center'></div>
+  <script src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
+  <script>
+    window.onload = function(){
+      getOAuthToken()
+    }
+  </script>
+</body>
+</html>
